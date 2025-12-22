@@ -10,7 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     
     <style>
-        /* === CSS STYLES (Original Luxury Layout) === */
+        /* === CSS STYLES (Original Luxury Layout - Enhanced Fonts) === */
         * {
             margin: 0;
             padding: 0;
@@ -37,7 +37,7 @@
         body {
             background: var(--bg-color);
             color: var(--text-color);
-            line-height: 1.6;
+            line-height: 1.8; /* زيادة المسافة بين السطور لراحة العين */
         }
 
         /* Header and Navigation */
@@ -46,7 +46,7 @@
             top: 0;
             left: 0;
             width: 100%;
-            padding: 2rem 9%;
+            padding: 2.5rem 9%; /* زيادة البادنج قليلاً */
             background: var(--bg-color);
             display: flex;
             justify-content: space-between;
@@ -61,13 +61,13 @@
         }
 
         .logo {
-            font-size: 2.8rem;
+            font-size: 3.2rem; /* تم تكبير اللوجو */
             color: var(--text-color);
             font-weight: 700;
         }
 
         .navbar a {
-            font-size: 1.9rem;
+            font-size: 2.1rem; /* تم تكبير روابط القائمة */
             color: var(--text-color);
             font-weight: 500;
             margin-left: 3.5rem;
@@ -79,7 +79,7 @@
         }
 
         #menu-icon {
-            font-size: 3.6rem;
+            font-size: 4rem; /* تكبير أيقونة الموبايل */
             color: var(--text-color);
             cursor: pointer;
             display: none;
@@ -87,7 +87,7 @@
 
         section {
             min-height: 100vh;
-            padding: 10rem 9% 2rem;
+            padding: 12rem 9% 2rem; /* زيادة المسافات العلوية */
         }
 
         /* Home Section */
@@ -98,23 +98,24 @@
         }
 
         .home-content {
-            max-width: 60rem;
+            max-width: 65rem; /* زيادة العرض قليلاً للخط الكبير */
         }
 
         .home-content h3 {
-            font-size: 3.5rem;
+            font-size: 3.8rem; /* تكبير العنوان الفرعي */
             font-weight: 700;
         }
 
         .home-content h1 {
-            font-size: 5.8rem;
+            font-size: 6.4rem; /* تكبير الاسم بشكل فخم */
             font-weight: 800;
             line-height: 1.2;
         }
 
         .home-content p {
-            font-size: 2rem;
+            font-size: 2.2rem; /* تكبير فقرة التعريف */
             margin: 2.5rem 0 4rem;
+            color: #d1d1d1;
         }
 
         .highlight {
@@ -122,17 +123,17 @@
         }
 
         #typed-text {
-            border-right: .2rem solid var(--main-color);
-            padding-right: 5px;
+            border-right: .3rem solid var(--main-color);
+            padding-right: 8px;
             min-height: 1.2em;
             display: inline-block;
         }
 
-        /* Unified Image Styling with Glow */
+        /* Image Styling with Glow */
         .home-img, .about-img {
             position: relative;
-            width: 45rem;
-            height: 45rem;
+            width: 48rem; /* زيادة حجم منطقة الصورة */
+            height: 48rem;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -157,13 +158,13 @@
 
         .image-box {
             position: relative;
-            width: 38rem;
-            height: 38rem;
+            width: 40rem; /* تكبير حجم الدائرة */
+            height: 40rem;
             background: var(--bg-color);
             border-radius: 50%;
             z-index: 1;
             overflow: hidden;
-            border: 0.2rem solid var(--main-color);
+            border: 0.3rem solid var(--main-color);
             display: flex;
             justify-content: center;
             align-items: center;
@@ -181,12 +182,12 @@
             display: inline-flex;
             justify-content: center;
             align-items: center;
-            width: 4.8rem;
-            height: 4.8rem;
+            width: 5.2rem; /* تكبير أزرار السوشيال */
+            height: 5.2rem;
             background: transparent;
             border: .2rem solid var(--main-color);
             border-radius: 50%;
-            font-size: 2.4rem;
+            font-size: 2.6rem;
             color: var(--main-color);
             margin: 3rem 1.5rem 3rem 0;
             transition: .5s ease;
@@ -200,11 +201,11 @@
 
         .btn {
             display: inline-block;
-            padding: 1.4rem 3.2rem;
+            padding: 1.6rem 3.6rem; /* تكبير الزر */
             background: var(--main-color);
             border-radius: 4rem;
-            box-shadow: 0 0 1.2rem var(--main-color);
-            font-size: 1.8rem;
+            box-shadow: 0 0 1.5rem var(--main-color);
+            font-size: 2rem; /* تكبير نص الزر */
             color: var(--bg-color);
             letter-spacing: .1rem;
             font-weight: 700;
@@ -212,12 +213,17 @@
             cursor: pointer;
         }
 
+        .btn:hover {
+            box-shadow: none;
+            transform: translateY(-3px);
+        }
+
         /* About Section */
         .about {
             display: flex;
             justify-content: center;
             align-items: center;
-            gap: 5rem;
+            gap: 6rem;
             background: var(--second-bg-color);
         }
 
@@ -225,13 +231,18 @@
             flex: 1;
         }
 
-        .heading {
-            text-align: center;
-            font-size: 4.8rem;
+        .about-content p {
+            font-size: 2.2rem; /* تكبير نص "عنّي" */
             margin-bottom: 4rem;
         }
 
-        /* === Updated Skills Section with Eye-Catching Circles === */
+        .heading {
+            text-align: center;
+            font-size: 5.2rem; /* تكبير العناوين الرئيسية */
+            margin-bottom: 5rem;
+        }
+
+        /* Skills Section */
         .skills {
             background: var(--bg-color);
         }
@@ -241,102 +252,98 @@
             justify-content: center;
             align-items: flex-start;
             flex-wrap: wrap;
-            gap: 5rem;
+            gap: 6rem;
         }
 
         .skills-column {
-            flex: 1 1 40rem;
+            flex: 1 1 45rem;
         }
 
         .skills-column h3 {
-            font-size: 2.8rem;
-            margin-bottom: 3.5rem;
+            font-size: 3.2rem; /* تكبير عناوين الأعمدة */
+            margin-bottom: 4rem;
             text-align: center;
             color: var(--main-color);
         }
 
-        /* Horizontal Skill Bars */
+        /* Progress Bars */
         .progress {
-            margin-bottom: 2.5rem;
+            margin-bottom: 3rem;
         }
 
         .progress h4 {
-            font-size: 2rem;
+            font-size: 2.2rem; /* تكبير مسميات المهارات */
             display: flex;
             justify-content: space-between;
-            margin-bottom: .8rem;
+            margin-bottom: 1rem;
         }
 
         .progress .bar {
-            height: 2.2rem;
-            border-radius: .6rem;
+            height: 2.4rem; /* تسميك شريط التقدم */
+            border-radius: .8rem;
             border: .2rem solid var(--main-color);
-            padding: .3rem;
+            padding: .4rem;
             background: rgba(0, 171, 240, 0.05);
         }
 
         .progress .bar span {
             display: block;
             height: 100%;
-            border-radius: .3rem;
+            border-radius: .4rem;
             background: var(--main-color);
             width: 0%; 
             transition: 1.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            box-shadow: 0 0 1rem var(--main-color);
+            box-shadow: 0 0 1.2rem var(--main-color);
         }
 
-        /* Circular Skills Container */
+        /* Circular Skills */
         .professional-skills-container {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
-            gap: 4rem;
+            gap: 5rem;
         }
 
         .circle-progress-container {
             display: flex;
             flex-direction: column;
             align-items: center;
-            gap: 1.5rem;
+            gap: 2rem;
         }
 
         .circular-progress {
             position: relative;
-            height: 16rem;
-            width: 16rem;
+            height: 18rem; /* تكبير الدوائر */
+            width: 18rem;
             border-radius: 50%;
             display: flex;
             justify-content: center;
             align-items: center;
-            /* Default background with gradient border effect */
             background: conic-gradient(var(--main-color) 0deg, var(--second-bg-color) 0deg);
-            box-shadow: 0 0 1.5rem rgba(0, 171, 240, 0.2);
-            transition: 0.3s;
+            box-shadow: 0 0 2rem rgba(0, 171, 240, 0.2);
         }
 
         .circular-progress::before {
             content: '';
             position: absolute;
-            height: 13.5rem;
-            width: 13.5rem;
+            height: 15rem;
+            width: 15rem;
             border-radius: 50%;
             background-color: var(--bg-color);
         }
 
         .progress-value {
             position: relative;
-            font-size: 3rem;
+            font-size: 3.4rem; /* تكبير النسبة داخل الدائرة */
             font-weight: 700;
             color: var(--main-color);
-            text-shadow: 0 0 1rem rgba(0, 171, 240, 0.5);
         }
 
         .skill-text {
-            font-size: 1.8rem;
+            font-size: 2rem; /* تكبير اسم المهارة تحت الدائرة */
             font-weight: 600;
             color: var(--text-color);
             text-align: center;
-            margin-top: 0.5rem;
         }
 
         /* Projects Section */
@@ -346,8 +353,8 @@
 
         .projects-container {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(32rem, 1fr));
-            gap: 3rem;
+            grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
+            gap: 3.5rem;
         }
 
         .project-box {
@@ -355,8 +362,8 @@
             border-radius: 2rem;
             overflow: hidden;
             display: flex;
-            height: 32rem;
-            box-shadow: 0 0 1.5rem rgba(0,0,0,0.5);
+            height: 35rem; /* تكبير المربعات */
+            box-shadow: 0 0 2rem rgba(0,0,0,0.5);
             background: #000;
         }
 
@@ -368,7 +375,7 @@
             justify-content: center;
             align-items: center;
             color: var(--main-color);
-            font-size: 8rem;
+            font-size: 10rem;
         }
 
         .project-box img {
@@ -378,23 +385,19 @@
             transition: .5s ease;
         }
 
-        .project-box:hover img {
-            transform: scale(1.1);
-        }
-
         .project-layer {
             position: absolute;
             bottom: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            background: linear-gradient(rgba(0,0,0,.1), var(--main-color));
+            background: linear-gradient(rgba(0,0,0,.2), var(--main-color));
             display: flex;
             justify-content: center;
             align-items: center;
             flex-direction: column;
             text-align: center;
-            padding: 0 2rem;
+            padding: 0 3rem;
             transform: translateY(100%);
             transition: .5s ease;
         }
@@ -404,14 +407,15 @@
         }
 
         .project-layer h4 {
-            font-size: 2.6rem;
+            font-size: 3rem; /* تكبير عنوان المشروع */
             color: var(--bg-color);
             font-weight: 800;
+            margin-bottom: 1rem;
         }
 
         .project-layer p {
-            font-size: 1.6rem;
-            margin: .3rem 0 1.5rem;
+            font-size: 1.8rem; /* تكبير وصف المشروع */
+            margin-bottom: 2rem;
             color: var(--bg-color);
             font-weight: 600;
         }
@@ -420,52 +424,28 @@
             display: inline-flex;
             justify-content: center;
             align-items: center;
-            width: 5.5rem;
-            height: 5.5rem;
+            width: 6rem;
+            height: 6rem;
             background: var(--text-color);
             border-radius: 50%;
             color: var(--second-bg-color);
-            font-size: 2.8rem;
+            font-size: 3rem;
         }
 
-        /* Contact Section (Restored Luxury Form) */
+        /* Contact Section */
         .contact {
             background: var(--second-bg-color);
-        }
-
-        .contact form {
-            max-width: 70rem;
-            margin: 0 auto;
-            text-align: center;
-        }
-
-        .contact form .input-box {
-            display: flex;
-            justify-content: space-between;
-            flex-wrap: wrap;
         }
 
         .contact form .input-box input,
         .contact form textarea {
             width: 100%;
-            padding: 1.8rem;
-            font-size: 1.8rem;
+            padding: 2.2rem; /* تكبير حقول الإدخال */
+            font-size: 2rem; /* تكبير خط الكتابة في الفورم */
             color: var(--text-color);
             background: var(--bg-color);
-            border-radius: .8rem;
-            margin: .8rem 0;
-        }
-
-        .contact form .input-box input {
-            width: 49%;
-        }
-
-        .contact form textarea {
-            resize: none;
-        }
-
-        .contact form .btn {
-            margin-top: 2rem;
+            border-radius: 1rem;
+            margin: 1rem 0;
         }
 
         /* Footer */
@@ -473,26 +453,26 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 2.5rem 9%;
+            padding: 3rem 9%;
             background: var(--bg-color);
         }
 
         .footer-text p {
-            font-size: 1.8rem;
+            font-size: 2rem; /* تكبير نص الحقوق */
         }
 
         .footer-iconTop a {
             display: inline-flex;
             justify-content: center;
             align-items: center;
-            padding: 1.2rem;
+            padding: 1.4rem;
             background: var(--main-color);
-            border-radius: .8rem;
+            border-radius: 1rem;
             transition: .5s ease;
         }
 
         .footer-iconTop a i {
-            font-size: 2.8rem;
+            font-size: 3.2rem;
             color: var(--bg-color);
         }
 
@@ -504,10 +484,10 @@
                 background: var(--bg-color); display: none;
             }
             .navbar.active { display: block; }
-            .navbar a { display: block; font-size: 2.2rem; margin: 3.5rem 0; }
+            .navbar a { display: block; font-size: 2.4rem; margin: 3.5rem 0; }
             .home, .about { flex-direction: column; text-align: center; }
-            .home-img, .about-img { width: 30rem; height: 30rem; margin: 4rem auto; }
-            .image-box { width: 25rem; height: 25rem; }
+            .home-img, .about-img { width: 35rem; height: 35rem; margin: 4rem auto; }
+            .image-box { width: 30rem; height: 30rem; }
             .contact form .input-box input { width: 100%; }
         }
     </style>
@@ -569,11 +549,10 @@
         </div>
     </section>
 
-    <!-- Updated Skills Section with Circles -->
+    <!-- Skills Section with Eye-Catching Circles -->
     <section class="skills" id="skills">
         <h2 class="heading">My <span class="highlight">Expertise</span></h2>
         <div class="skills-container">
-            <!-- Left Column: Technical Skills -->
             <div class="skills-column">
                 <h3>Technical Proficiency</h3>
                 <div class="technical-skills">
@@ -592,25 +571,21 @@
                 </div>
             </div>
 
-            <!-- Right Column: Circular Professional Skills (Eye Catching) -->
             <div class="skills-column">
                 <h3>Core Capabilities</h3>
                 <div class="professional-skills-container">
-                    <!-- Circle 1 -->
                     <div class="circle-progress-container">
                         <div class="circular-progress" data-value="98">
                             <span class="progress-value">0%</span>
                         </div>
                         <span class="skill-text">Problem Solving</span>
                     </div>
-                    <!-- Circle 2 -->
                     <div class="circle-progress-container">
                         <div class="circular-progress" data-value="92">
                             <span class="progress-value">0%</span>
                         </div>
                         <span class="skill-text">Data Engineering</span>
                     </div>
-                    <!-- Circle 3 -->
                     <div class="circle-progress-container">
                         <div class="circular-progress" data-value="95">
                             <span class="progress-value">0%</span>
@@ -750,7 +725,8 @@
                     if (top >= offset && top < offset + height) {
                         navLinks.forEach(link => {
                             link.classList.remove('active');
-                            document.querySelector('header nav a[href*=' + id + ']').classList.add('active');
+                            const target = document.querySelector('header nav a[href*=' + id + ']');
+                            if(target) target.classList.add('active');
                         });
                     }
                 });
@@ -788,7 +764,8 @@
 
                 // Animate Horizontal Bars
                 skillBars.forEach(bar => { 
-                    bar.style.width = bar.parentElement.previousElementSibling.querySelector('span').innerText; 
+                    const percent = bar.parentElement.previousElementSibling.querySelector('span').innerText;
+                    bar.style.width = percent; 
                 });
 
                 // Animate Circular Progress
