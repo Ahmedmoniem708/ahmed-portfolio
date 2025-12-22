@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ahmed Mohamed - Senior AI & ML Solutions Engineer</title>
-    <!-- Boxicons for Professional Icons -->
+    <!-- Boxicons for icons -->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <!-- Google Fonts: Poppins -->
+    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     
     <style>
-        /* === Global CSS Styles === */
+        /* === CSS STYLES === */
         * {
             margin: 0;
             padding: 0;
@@ -39,7 +39,7 @@
             color: var(--text-color);
         }
 
-        /* Header Styling */
+        /* Header and Navigation */
         .header {
             position: fixed;
             top: 0;
@@ -89,7 +89,7 @@
             padding: 10rem 9% 2rem;
         }
 
-        /* Home Section Styling */
+        /* Home Section */
         .home {
             display: flex;
             align-items: center;
@@ -127,18 +127,19 @@
             display: inline-block;
         }
 
-        /* Image Glow Effect */
-        .home-img {
+        /* Profile Image Container */
+        .home-img, .about-img {
             position: relative;
             width: 45rem;
             height: 45rem;
             display: flex;
             justify-content: center;
             align-items: center;
-            margin-left: auto;
         }
 
-        .home-img .glowing-circle {
+        .home-img { margin-left: auto; }
+
+        .glowing-circle {
             position: absolute;
             width: 100%;
             height: 100%;
@@ -153,7 +154,7 @@
             100% { transform: rotate(360deg); }
         }
 
-        .home-img .image {
+        .image-box {
             position: relative;
             width: 38rem;
             height: 38rem;
@@ -161,15 +162,16 @@
             border-radius: 50%;
             z-index: 1;
             overflow: hidden;
+            border: 0.2rem solid var(--main-color);
         }
 
-        .home-img .image img {
+        .image-box img {
             width: 100%;
             height: 100%;
             object-fit: cover;
         }
 
-        /* Social Media Icons */
+        /* Buttons & Social Media */
         .social-media a {
             display: inline-flex;
             justify-content: center;
@@ -204,19 +206,17 @@
             transition: .5s ease;
         }
 
-        /* About Section Styling */
+        /* About Section */
         .about {
             display: flex;
             justify-content: center;
             align-items: center;
-            gap: 2rem;
+            gap: 5rem;
             background: var(--second-bg-color);
         }
 
-        .about-img img {
-            width: 35vw;
-            border-radius: 50%;
-            border: 0.5rem solid var(--main-color);
+        .about-content {
+            flex: 1;
         }
 
         .heading {
@@ -225,7 +225,7 @@
             margin-bottom: 3rem;
         }
 
-        /* Skills Section Styling */
+        /* Skills Section */
         .skills-container {
             display: flex;
             justify-content: center;
@@ -328,7 +328,7 @@
             line-height: 1.4;
         }
 
-        /* Projects Section Styling */
+        /* Projects Section */
         .projects {
             background: var(--second-bg-color);
         }
@@ -344,7 +344,8 @@
             border-radius: 2rem;
             overflow: hidden;
             display: flex;
-            height: 25rem;
+            height: 28rem;
+            box-shadow: 0 0 1rem rgba(0,0,0,0.3);
         }
 
         .project-box img {
@@ -381,11 +382,15 @@
 
         .project-layer h4 {
             font-size: 2.5rem;
+            color: var(--bg-color);
+            font-weight: 700;
         }
 
         .project-layer p {
             font-size: 1.4rem;
             margin: .3rem 0 1rem;
+            color: var(--bg-color);
+            font-weight: 500;
         }
 
         .project-layer a {
@@ -400,7 +405,35 @@
             font-size: 2rem;
         }
 
-        /* Footer Styling */
+        /* Contact Section */
+        .contact form {
+            max-width: 70rem;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .contact form .input-box {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        .contact form .input-box input,
+        .contact form textarea {
+            width: 100%;
+            padding: 1.5rem;
+            font-size: 1.6rem;
+            color: var(--text-color);
+            background: var(--second-bg-color);
+            border-radius: .8rem;
+            margin: .7rem 0;
+        }
+
+        .contact form .input-box input {
+            width: 49%;
+        }
+
+        /* Footer */
         .footer {
             display: flex;
             justify-content: space-between;
@@ -451,30 +484,28 @@
                 font-size: 2rem;
                 margin: 3rem 0;
             }
-            .home {
+            .home, .about {
                 flex-direction: column;
+                text-align: center;
             }
-            .home-img {
+            .home-img, .about-img {
                 width: 30rem;
                 height: 30rem;
-                margin-top: 4rem;
+                margin: 4rem auto;
             }
-            .home-img .image {
+            .image-box {
                 width: 25rem;
                 height: 25rem;
             }
-            .about {
-                flex-direction: column-reverse;
-            }
-            .about-img img {
-                width: 70vw;
+            .contact form .input-box input {
+                width: 100%;
             }
         }
     </style>
 </head>
 <body>
 
-    <!-- Professional Navigation Bar -->
+    <!-- Header and Navigation -->
     <header class="header">
         <a href="#" class="logo">Ahmed.</a>
         <i class='bx bx-menu' id="menu-icon"></i>
@@ -487,13 +518,13 @@
         </nav>
     </header>
 
-    <!-- Professional Home Section -->
+    <!-- Home Section -->
     <section class="home" id="home">
         <div class="home-content">
             <h3>Hello, It's Me</h3>
             <h1>Ahmed Mohamed Abdelmoniem</h1>
             <h3>And I'm a <span class="highlight" id="typed-text"></span></h3>
-            <p>Senior AI & Machine Learning Solutions Engineer and Data Scientist. I specialize in architecting high-impact, autonomous systems and transforming massive datasets into scalable, production-ready AI solutions using Python and industry-leading frameworks.</p>
+            <p>Senior AI & Machine Learning Solutions Engineer and Data Scientist. I specialize in architecting high-impact, autonomous systems and transforming massive datasets into scalable, production-ready AI solutions.</p>
             
             <div class="social-media">
                 <a href="https://www.linkedin.com/in/ahmed-abdelmoniem-406619288" target="_blank"><i class='bx bxl-linkedin'></i></a>
@@ -506,28 +537,30 @@
 
         <div class="home-img">
             <div class="glowing-circle"></div>
-            <div class="image">
-                <!-- Corrected filename to: profile.jpg.jpg.jpg -->
-                <img src="profile.jpg.jpg.jpg" alt="Ahmed Mohamed" onerror="this.src='https://placehold.co/400x400/081b29/00abf0?text=Profile'">
+            <div class="image-box">
+                <!-- Using your actual uploaded filename: profile.jpg.jpg.jpeg -->
+                <img src="profile.jpg.jpg.jpeg" alt="Ahmed Mohamed" onerror="this.src='https://placehold.co/400x400/081b29/00abf0?text=Profile'">
             </div>
         </div>
     </section>
 
-    <!-- Professional About Section -->
+    <!-- About Section - Image size updated to match Home Section -->
     <section class="about" id="about">
         <div class="about-img">
-            <!-- Corrected filename to: profile.jpg.jpg.jpg -->
-            <img src="profile.jpg.jpg.jpg" alt="About Me" onerror="this.src='https://placehold.co/400x400/081b29/00abf0?text=About+Me'">
+            <div class="glowing-circle"></div>
+            <div class="image-box">
+                <img src="profile.jpg.jpg.jpeg" alt="About Me" onerror="this.src='https://placehold.co/400x400/081b29/00abf0?text=About+Me'">
+            </div>
         </div>
         <div class="about-content">
             <h2 class="heading">About <span class="highlight">Me</span></h2>
-            <h3>Lead AI & ML Architect | Data Scientist</h3>
-            <p>As a seasoned AI & Machine Learning professional, I architect scalable, high-performance intelligent systems. My expertise covers the end-to-end lifecycle of Data Science, from rigorous feature engineering to the deployment of advanced neural networks. I bridge the gap between complex mathematical theory and practical, industry-standard software engineering to drive measurable business value through Artificial Intelligence.</p>
-            <a href="#contact" class="btn">Collaborate With Me</a>
+            <h3>Expert AI & ML Engineer | Data Scientist</h3>
+            <p>I am a proficient AI & Machine Learning Engineer dedicated to architecting scalable, high-impact intelligent systems. With extensive expertise spanning the complete Data Science lifecycle, I specialize in engineering advanced neural networks and deploying robust deep learning models. My approach combines rigorous mathematical foundations with practical, industry-standard software engineering.</p>
+            <a href="#contact" class="btn">Collaborate</a>
         </div>
     </section>
 
-    <!-- Skills Section with Circular Progress -->
+    <!-- Skills Section -->
     <section class="skills" id="skills">
         <h2 class="heading">My <span class="highlight">Expertise</span></h2>
         
@@ -544,32 +577,14 @@
                         <div class="bar"><span data-width="90%"></span></div>
                     </div>
                     <div class="progress">
-                        <h4>Neural Networks & Deep Learning <span>85%</span></h4>
+                        <h4>Deep Learning <span>85%</span></h4>
                         <div class="bar"><span data-width="85%"></span></div>
                     </div>
                 </div>
             </div>
 
             <div class="skills-column">
-                <h3>Core Capabilities</h3>
-                <div class="professional-skills-container">
-                    <div class="circle-progress-container">
-                        <div class="circular-progress" data-value="95">
-                            <span class="progress-value">0%</span>
-                        </div>
-                        <span class="skill-text">Problem Solving</span>
-                    </div>
-                    <div class="circle-progress-container">
-                        <div class="circular-progress" data-value="98">
-                            <span class="progress-value">0%</span>
-                        </div>
-                        <span class="skill-text">System Architecture</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="skills-column">
-                <h3>Model Benchmarks</h3>
+                <h3>Benchmarks</h3>
                 <div class="professional-skills-container">
                     <div class="circle-progress-container">
                         <div class="circular-progress" data-value="96">
@@ -579,40 +594,39 @@
                         <span class="skill-text">AI Spam Classifier</span>
                     </div>
                     <div class="circle-progress-container">
-                        <div class="circular-progress" data-value="60">
-                            <span class="progress-value">0.0</span>
-                            <span class="progress-metric">R-Squared</span>
+                        <div class="circular-progress" data-value="95">
+                            <span class="progress-value">0%</span>
                         </div>
-                        <span class="skill-text">Predictive Analytics</span>
+                        <span class="skill-text">Problem Solving</span>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Five Major Projects Section -->
+    <!-- Projects Section - All 5 Projects Added -->
     <section class="projects" id="projects">
         <h2 class="heading">Strategic <span class="highlight">Projects</span></h2>
         <div class="projects-container">
-            <!-- Project 1: Spam Detector -->
+            <!-- Project 1 -->
             <div class="project-box">
-                <img src="spam-detector.png.jpg" alt="AI Spam Detector" onerror="this.src='https://placehold.co/600x400/081b29/00abf0?text=Spam+Detector'">
+                <img src="spam-detector.png.png" alt="AI Spam Detector" onerror="this.src='https://placehold.co/600x400/081b29/00abf0?text=Spam+Detector'">
                 <div class="project-layer">
                     <h4>AI Spam Classifier</h4>
                     <p>NLP model using Naive Bayes to architect secure communications.</p>
                     <a href="https://github.com/Ahmedmoniem708/AI-Spam-Detector" target="_blank"><i class='bx bxl-github'></i></a>
                 </div>
             </div>
-            <!-- Project 2: House Pricing -->
+            <!-- Project 2 -->
             <div class="project-box">
-                <img src="house-price.png.jpg" alt="House Price" onerror="this.src='https://placehold.co/600x400/081b29/00abf0?text=House+Price'">
+                <img src="house-price.png.png" alt="House Price" onerror="this.src='https://placehold.co/600x400/081b29/00abf0?text=House+Price'">
                 <div class="project-layer">
                     <h4>Predictive House Pricing</h4>
                     <p>Advanced regression analytics for high-precision valuation forecasting.</p>
                     <a href="https://github.com/Ahmedmoniem708/House-Price-Regression-ML" target="_blank"><i class='bx bxl-github'></i></a>
                 </div>
             </div>
-            <!-- Project 3: Visual Analyzer -->
+            <!-- Project 3 -->
             <div class="project-box">
                 <img src="visual-analyzer.jpg.jpg" alt="Visual Analyzer" onerror="this.src='https://placehold.co/600x400/081b29/00abf0?text=Visual+Analyzer'">
                 <div class="project-layer">
@@ -621,7 +635,7 @@
                     <a href="https://github.com/Ahmedmoniem708/visual-analyzer" target="_blank"><i class='bx bxl-github'></i></a>
                 </div>
             </div>
-            <!-- Project 4: Bank System -->
+            <!-- Project 4 -->
             <div class="project-box">
                 <img src="https://placehold.co/600x400/112e42/00abf0?text=Royal+Bank+System" alt="Royal Bank System">
                 <div class="project-layer">
@@ -630,7 +644,7 @@
                     <a href="https://github.com/Ahmedmoniem708/Royal-Bank-System" target="_blank"><i class='bx bxl-github'></i></a>
                 </div>
             </div>
-            <!-- Project 5: Churn Prediction -->
+            <!-- Project 5 -->
             <div class="project-box">
                 <img src="https://placehold.co/600x400/081b29/00abf0?text=Customer+Churn" alt="Customer Churn Prediction">
                 <div class="project-layer">
@@ -650,19 +664,14 @@
                 <input type="text" placeholder="Full Name" required>
                 <input type="email" placeholder="Email Address" value="ahmed.mohamedem797979@gmail.com" required>
             </div>
-            <div class="input-box">
-                <input type="tel" placeholder="Mobile Number" value="+201012885132" required>
-                <input type="text" placeholder="Subject">
-            </div>
             <textarea cols="30" rows="10" placeholder="Message Details"></textarea>
-            <input type="submit" value="Send Brief" class="btn">
+            <input type="submit" value="Send Message" class="btn">
         </form>
     </section>
 
-    <!-- Footer -->
     <footer class="footer">
         <div class="footer-text">
-            <p>Copyright &copy; 2025 by Ahmed Mohamed | Senior AI Engineer & Data Scientist</p>
+            <p>Copyright &copy; 2025 by Ahmed Mohamed | Senior AI Engineer</p>
         </div>
         <div class="footer-iconTop">
             <a href="#home"><i class='bx bx-up-arrow-alt'></i></a>
@@ -672,7 +681,6 @@
     <!-- JavaScript Logic -->
     <script>
         document.addEventListener("DOMContentLoaded", () => {
-            // Mobile Navigation Toggle
             const menuIcon = document.querySelector('#menu-icon');
             const navbar = document.querySelector('.navbar');
             if (menuIcon && navbar) {
@@ -682,18 +690,14 @@
                 };
             }
 
-            // Scroll Logic: Active Links & Sticky Header
             const sections = document.querySelectorAll('section');
             const navLinks = document.querySelectorAll('header nav a');
-            const header = document.querySelector('header');
-
             window.onscroll = () => {
                 sections.forEach(sec => {
                     let top = window.scrollY;
                     let offset = sec.offsetTop - 150;
                     let height = sec.offsetHeight;
                     let id = sec.getAttribute('id');
-
                     if (top >= offset && top < offset + height) {
                         navLinks.forEach(link => {
                             link.classList.remove('active');
@@ -702,18 +706,9 @@
                         });
                     }
                 });
-
-                if (header) {
-                    header.classList.toggle('sticky', window.scrollY > 100);
-                }
-
-                if (menuIcon && navbar) {
-                    menuIcon.classList.remove('bx-x');
-                    navbar.classList.remove('active');
-                }
+                document.querySelector('header').classList.toggle('sticky', window.scrollY > 100);
             };
 
-            // Enhanced Typing Effect
             const typedText = document.getElementById('typed-text');
             const words = ["AI & ML Engineer", "Data Scientist", "Solutions Architect"];
             let wordIdx = 0, charIdx = 0, isDeleting = false;
@@ -721,31 +716,17 @@
             function typeEffect() {
                 if (!typedText) return;
                 const currentWord = words[wordIdx];
-                
                 if (!isDeleting) {
                     typedText.textContent = currentWord.substring(0, charIdx++);
-                    if (charIdx > currentWord.length) {
-                        isDeleting = true;
-                        setTimeout(typeEffect, 2000); 
-                        return;
-                    }
+                    if (charIdx > currentWord.length) { isDeleting = true; setTimeout(typeEffect, 2000); return; }
                 } else {
                     typedText.textContent = currentWord.substring(0, charIdx--);
-                    if (charIdx < 0) {
-                        isDeleting = false;
-                        wordIdx = (wordIdx + 1) % words.length;
-                        charIdx = 0;
-                        setTimeout(typeEffect, 500); 
-                        return;
-                    }
+                    if (charIdx < 0) { isDeleting = false; wordIdx = (wordIdx + 1) % words.length; charIdx = 0; setTimeout(typeEffect, 500); return; }
                 }
-                
-                const speed = isDeleting ? 40 : 80;
-                setTimeout(typeEffect, speed);
+                setTimeout(typeEffect, isDeleting ? 40 : 80);
             }
             typeEffect();
 
-            // Intersection Observer for Skill Animations
             const skillBars = document.querySelectorAll('.bar span');
             const circularProgresses = document.querySelectorAll('.circular-progress');
             const skillsSection = document.querySelector('#skills');
@@ -754,50 +735,21 @@
             const animateSkills = () => {
                 if (animationStarted) return;
                 animationStarted = true;
-
-                skillBars.forEach(bar => {
-                    const targetWidth = bar.getAttribute('data-width');
-                    bar.style.width = targetWidth;
-                });
-
+                skillBars.forEach(bar => { bar.style.width = bar.getAttribute('data-width'); });
                 circularProgresses.forEach(progress => {
-                    let progressValue = progress.querySelector('.progress-value');
-                    let startValue = 0;
-                    let endValue = parseInt(progress.getAttribute('data-value'));
-                    
-                    let skillTextEl = progress.parentElement.querySelector('.skill-text');
-                    let isRsquared = skillTextEl && skillTextEl.innerText.includes("Predictive Analytics");
-                    
-                    let speed = 20;
-                    let progressInterval = setInterval(() => {
+                    let startValue = 0, endValue = parseInt(progress.getAttribute('data-value')), progressValue = progress.querySelector('.progress-value');
+                    let timer = setInterval(() => {
                         startValue++;
-                        
-                        if (isRsquared) {
-                            progressValue.textContent = (startValue / 100).toFixed(2);
-                        } else {
-                            progressValue.textContent = `${startValue}%`;
-                        }
-                        
+                        progressValue.textContent = `${startValue}%`;
                         progress.style.background = `conic-gradient(var(--main-color) ${startValue * 3.6}deg, var(--second-bg-color) 0deg)`;
-
-                        if (startValue >= endValue) {
-                            clearInterval(progressInterval);
-                        }
-                    }, speed);
+                        if (startValue >= endValue) clearInterval(timer);
+                    }, 20);
                 });
             };
             
-            if (skillsSection && 'IntersectionObserver' in window) {
-                const observer = new IntersectionObserver((entries) => {
-                    entries.forEach(entry => {
-                        if (entry.isIntersecting) {
-                            animateSkills();
-                        }
-                    });
-                }, { threshold: 0.2 });
+            if (skillsSection) {
+                const observer = new IntersectionObserver((entries) => { if (entries[0].isIntersecting) animateSkills(); }, { threshold: 0.2 });
                 observer.observe(skillsSection);
-            } else {
-                animateSkills();
             }
         });
     </script>
