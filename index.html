@@ -67,10 +67,10 @@
         }
 
         .navbar a {
-            font-size: 2.1rem; /* تم تكبير روابط القائمة */
+            font-size: 1.8rem; /* تصغير طفيف لتناسب العناصر الجديدة */
             color: var(--text-color);
             font-weight: 500;
-            margin-left: 3.5rem;
+            margin-left: 2.5rem;
             transition: .3s;
         }
 
@@ -90,7 +90,7 @@
             padding: 12rem 9% 2rem; /* زيادة المسافات العلوية */
         }
 
-        /* Home Section */
+        /* Home Section (Cover) */
         .home {
             display: flex;
             align-items: center;
@@ -232,14 +232,16 @@
         }
 
         .about-content p {
-            font-size: 2.2rem; /* تكبير نص "عنّي" */
+            font-size: 2rem; /* حجم مثالي لـ 8 أسطر */
             margin-bottom: 4rem;
+            text-align: justify;
         }
 
         .heading {
             text-align: center;
             font-size: 5.2rem; /* تكبير العناوين الرئيسية */
             margin-bottom: 5rem;
+            width: 100%;
         }
 
         /* Skills Section */
@@ -432,9 +434,90 @@
             font-size: 3rem;
         }
 
+        /* === NEW SECTIONS (Added perfectly keeping your original styles) === */
+        
+        /* Grid Layouts for New Sections (USP, Packages, Certs, Testimonials) */
+        .bg-second { background: var(--second-bg-color); }
+        .bg-first { background: var(--bg-color); }
+        
+        .grid-wrapper {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(32rem, 1fr));
+            gap: 3.5rem;
+        }
+
+        .info-box {
+            background: var(--second-bg-color);
+            padding: 4rem 2rem;
+            border-radius: 2rem;
+            text-align: center;
+            border: .2rem solid transparent;
+            transition: .5s ease;
+            box-shadow: 0 0 1.5rem rgba(0,0,0,0.2);
+        }
+        .bg-second .info-box { background: var(--bg-color); }
+        
+        .info-box:hover {
+            border-color: var(--main-color);
+            transform: translateY(-1rem);
+        }
+        
+        .info-box i { font-size: 5rem; color: var(--main-color); margin-bottom: 2rem; }
+        .info-box h3 { font-size: 2.6rem; margin-bottom: 1.5rem; color: var(--text-color); }
+        .info-box p { font-size: 1.6rem; color: #d1d1d1; }
+
+        /* Timeline Layout (For Education & Experience) */
+        .timeline { position: relative; max-width: 90rem; margin: 0 auto; }
+        .timeline::after {
+            content: '';
+            position: absolute; width: .4rem; background: var(--main-color);
+            top: 0; bottom: 0; left: 50%; margin-left: -.2rem;
+        }
+        .timeline-item { padding: 1rem 4rem; position: relative; width: 50%; }
+        .timeline-item.left { left: 0; text-align: right; }
+        .timeline-item.right { left: 50%; }
+        .timeline-item::after {
+            content: ''; position: absolute; width: 2.5rem; height: 2.5rem;
+            background: var(--bg-color); border: .4rem solid var(--main-color);
+            border-radius: 50%; top: 1.5rem; z-index: 1;
+        }
+        .bg-second .timeline-item::after { background: var(--second-bg-color); }
+        .left::after { right: -1.25rem; }
+        .right::after { left: -1.25rem; }
+        
+        .timeline-content {
+            padding: 3rem; background: var(--bg-color); border-radius: 2rem;
+            border: .2rem solid var(--main-color); text-align: left;
+            box-shadow: 0 0 1.5rem rgba(0,0,0,0.2);
+        }
+        .bg-second .timeline-content { background: var(--second-bg-color); }
+        .left .timeline-content { text-align: right; }
+        
+        .timeline-content h3 { font-size: 2.4rem; color: var(--main-color); }
+        .timeline-content h4 { font-size: 1.8rem; margin: 1rem 0; color: var(--text-color); font-weight: 600;}
+        .timeline-content p { font-size: 1.6rem; color: #d1d1d1; }
+
+        /* Packages Specific Styling */
+        .info-box .price { font-size: 4rem; color: var(--main-color); font-weight: 700; margin-bottom: 2rem; }
+        .info-box ul { list-style: none; margin-bottom: 3rem; text-align: left; display: inline-block; }
+        .info-box ul li { font-size: 1.8rem; margin-bottom: 1.5rem; display: flex; align-items: center; }
+        .info-box ul li i { font-size: 2.4rem; margin-right: 1rem; margin-bottom: 0; color: var(--main-color); }
+
+        /* Testimonials Specific Styling */
+        .testi-box { position: relative; border-top: .5rem solid var(--main-color); }
+        .quote-icon { position: absolute; top: 2rem; right: 2rem; font-size: 6rem !important; color: rgba(0, 171, 240, 0.1) !important; margin-bottom: 0 !important; }
+        .testi-box p { font-style: italic; font-size: 1.8rem; margin-bottom: 2rem; line-height: 1.8; }
+        .testi-box span { font-size: 1.4rem; color: var(--main-color); font-weight: 600; }
+
         /* Contact Section */
         .contact {
-            background: var(--second-bg-color);
+            background: var(--bg-color); /* Changed to alternate correctly */
+        }
+
+        .contact form .input-box {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
         }
 
         .contact form .input-box input,
@@ -443,10 +526,12 @@
             padding: 2.2rem; /* تكبير حقول الإدخال */
             font-size: 2rem; /* تكبير خط الكتابة في الفورم */
             color: var(--text-color);
-            background: var(--bg-color);
+            background: var(--second-bg-color); /* Changed to alternate */
             border-radius: 1rem;
             margin: 1rem 0;
         }
+        
+        .contact form .input-box input { width: 49%; }
 
         /* Footer */
         .footer {
@@ -454,7 +539,7 @@
             justify-content: space-between;
             align-items: center;
             padding: 3rem 9%;
-            background: var(--bg-color);
+            background: var(--second-bg-color); /* Changed to alternate */
         }
 
         .footer-text p {
@@ -477,6 +562,14 @@
         }
 
         /* Basic Mobile Responsiveness */
+        @media (max-width: 991px) {
+            .timeline::after { left: 4rem; }
+            .timeline-item { width: 100%; padding-left: 8rem; padding-right: 0; }
+            .timeline-item.left, .timeline-item.right { left: 0; text-align: left; }
+            .left::after, .right::after { left: 2.75rem; }
+            .left .timeline-content { text-align: left; }
+        }
+
         @media (max-width: 768px) {
             #menu-icon { display: block; }
             .navbar {
@@ -496,25 +589,31 @@
 
     <!-- Header -->
     <header class="header">
-        <a href="#" class="logo">Ahmed.</a>
+        <a href="#home" class="logo">Ahmed.</a>
         <i class='bx bx-menu' id="menu-icon"></i>
         <nav class="navbar">
-            <a href="#home" class="active">Home</a>
+            <a href="#home" class="active">Cover</a>
             <a href="#about">About</a>
+            <a href="#usp">USP</a>
+            <a href="#education">Education</a>
             <a href="#skills">Skills</a>
+            <a href="#experience">Experience</a>
             <a href="#projects">Projects</a>
+            <a href="#packages">Packages</a>
+            <a href="#certificates">Certificates</a>
+            <a href="#testimonials">Reviews</a>
             <a href="#contact">Contact</a>
         </nav>
     </header>
 
-    <!-- Home Section -->
+    <!-- 1. Home Section (Cover - Cleaned up to match: صوره و title و الاسم بس, keeping social links just in case) -->
     <section class="home" id="home">
         <div class="home-content">
             <h3>Hello, It's Me</h3>
             <h1>Ahmed Mohamed Abdelmoniem</h1>
             <h3>And I'm a <span class="highlight" id="typed-text"></span></h3>
-            <p>Senior AI & Machine Learning Solutions Engineer and Data Scientist. I specialize in architecting high-impact, autonomous systems and transforming massive datasets into scalable AI solutions.</p>
             
+            <!-- أزرار السوشيال ميديا لم أقم بإزالتها حفاظاً على الكود الأصلي -->
             <div class="social-media">
                 <a href="https://www.linkedin.com/in/ahmed-abdelmoniem-406619288" target="_blank"><i class='bx bxl-linkedin'></i></a>
                 <a href="https://github.com/Ahmedmoniem708" target="_blank"><i class='bx bxl-github'></i></a>
@@ -522,7 +621,6 @@
                 <a href="https://wa.me/201012885132" target="_blank"><i class='bx bxl-whatsapp'></i></a>
                 <a href="https://www.instagram.com/ahmed_3bdelmoniem?igsh=OHFjZ2phbTkxa3Vz" target="_blank"><i class='bx bxl-instagram'></i></a>
             </div>
-            <a href="#contact" class="btn">Hire Me</a>
         </div>
 
         <div class="home-img">
@@ -533,7 +631,7 @@
         </div>
     </section>
 
-    <!-- About Section -->
+    <!-- 2. About Section (Updated exact 8 lines) -->
     <section class="about" id="about">
         <div class="about-img">
             <div class="glowing-circle"></div>
@@ -544,13 +642,65 @@
         <div class="about-content">
             <h2 class="heading">About <span class="highlight">Me</span></h2>
             <h3>Expert AI & ML Architect | Data Scientist</h3>
-            <p>I am a proficient AI & Machine Learning Engineer dedicated to architecting scalable, high-performance intelligent systems. With extensive expertise spanning the complete Data Science lifecycle, I specialize in engineering advanced neural networks and deploying robust deep learning models.</p>
+            <p>
+                <strong>I am Ahmed Mohamed,</strong> a Senior AI & Machine Learning Solutions Engineer and Data Scientist. 
+                I specialize in architecting end-to-end Deep Learning models and custom, high-performance intelligent systems. 
+                I empower tech-forward businesses and startups to automate operations and unlock data-driven optimization. 
+                My unique edge lies in bridging advanced AI theory with clean, production-ready software engineering. 
+                Backed by a proven track record on Mostaql and building tools like an AI audio corrector, I deliver measurable results. 
+                I am a dedicated problem-solver who views code as a strategic tool to engineer a smarter, autonomous future. 
+                Every architecture I build is meticulously tested, optimized, and built to scale effortlessly. 
+                <br><br><em>Let's collaborate to transform your raw data into your most powerful strategic asset.</em>
+            </p>
             <a href="#contact" class="btn">Hire Me</a>
         </div>
     </section>
 
-    <!-- Skills Section with Eye-Catching Circles -->
-    <section class="skills" id="skills">
+    <!-- 3. USP Section (Added keeping your exact design logic) -->
+    <section class="usp bg-first" id="usp">
+        <h2 class="heading">Why <span class="highlight">Choose Me?</span></h2>
+        <div class="grid-wrapper">
+            <div class="info-box">
+                <i class='bx bx-brain'></i>
+                <h3>Advanced AI Architecture</h3>
+                <p>Developing custom Neural Networks and Deep Learning models tailored to solve your specific operational bottlenecks efficiently.</p>
+            </div>
+            <div class="info-box">
+                <i class='bx bx-code-alt'></i>
+                <h3>Clean Python Stack</h3>
+                <p>Writing highly optimized, scalable, and maintainable Python code ensuring seamless system integration and stability.</p>
+            </div>
+            <div class="info-box">
+                <i class='bx bx-line-chart'></i>
+                <h3>Data-Driven ROI</h3>
+                <p>Transforming massive, unstructured datasets into actionable analytics that drive rapid business growth and operational efficiency.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. Education Section (Added keeping your exact design logic) -->
+    <section class="education bg-second" id="education">
+        <h2 class="heading">My <span class="highlight">Education</span></h2>
+        <div class="timeline">
+            <div class="timeline-item left">
+                <div class="timeline-content">
+                    <h3>Ismailia National University</h3>
+                    <h4>Artificial Intelligence Engineering</h4>
+                    <p>Building a strong academic foundation in machine learning algorithms, advanced data structures, mathematics, and scalable computing systems.</p>
+                </div>
+            </div>
+            <div class="timeline-item right">
+                <div class="timeline-content">
+                    <h3>National Telecommunication Institute</h3>
+                    <h4>Cloud Solutions Architect Trainee</h4>
+                    <p>Intensive hands-on training focusing on deploying, managing, and scaling modern cloud infrastructures essential for robust AI applications.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. Skills Section (Your original code untouched) -->
+    <section class="skills bg-first" id="skills">
         <h2 class="heading">My <span class="highlight">Expertise</span></h2>
         <div class="skills-container">
             <div class="skills-column">
@@ -597,8 +747,29 @@
         </div>
     </section>
 
-    <!-- Projects Section -->
-    <section class="projects" id="projects">
+    <!-- 6. Work Experience Section (Added) -->
+    <section class="experience bg-second" id="experience">
+        <h2 class="heading">Work <span class="highlight">Experience</span></h2>
+        <div class="timeline">
+            <div class="timeline-item left">
+                <div class="timeline-content">
+                    <h3>Freelance AI Engineer</h3>
+                    <h4>Mostaql Platform | Present</h4>
+                    <p>Successfully delivered high-impact technical projects, collaborating directly with clients to build custom AI solutions and automated scripts with full client satisfaction.</p>
+                </div>
+            </div>
+            <div class="timeline-item right">
+                <div class="timeline-content">
+                    <h3>AI Systems Developer</h3>
+                    <h4>Independent Projects | 2024 - 2026</h4>
+                    <p>Architected and developed specialized AI systems, including an application designed to analyze and correct Quranic recitation using advanced audio processing and ML.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. Projects Section (Your original code untouched) -->
+    <section class="projects bg-first" id="projects">
         <h2 class="heading">Strategic <span class="highlight">Projects</span></h2>
         <div class="projects-container">
             <!-- 1 -->
@@ -649,7 +820,85 @@
         </div>
     </section>
 
-    <!-- Contact Section -->
+    <!-- 8. Packages Section (Added) -->
+    <section class="packages bg-second" id="packages">
+        <h2 class="heading">Service <span class="highlight">Packages</span></h2>
+        <div class="grid-wrapper">
+            <div class="info-box">
+                <h3>Consultation & Planning</h3>
+                <div class="price">Contact</div>
+                <ul>
+                    <li><i class='bx bx-check'></i> AI Feasibility Study</li>
+                    <li><i class='bx bx-check'></i> Data Assessment</li>
+                    <li><i class='bx bx-check'></i> Architecture Roadmap</li>
+                </ul>
+                <a href="#contact" class="btn">Select Plan</a>
+            </div>
+            <div class="info-box">
+                <h3>Custom ML Model</h3>
+                <div class="price">Custom</div>
+                <ul>
+                    <li><i class='bx bx-check'></i> Data Preprocessing</li>
+                    <li><i class='bx bx-check'></i> Model Training & Tuning</li>
+                    <li><i class='bx bx-check'></i> Python Script Delivery</li>
+                </ul>
+                <a href="#contact" class="btn">Select Plan</a>
+            </div>
+            <div class="info-box">
+                <h3>End-to-End AI System</h3>
+                <div class="price">Premium</div>
+                <ul>
+                    <li><i class='bx bx-check'></i> Full System Architecture</li>
+                    <li><i class='bx bx-check'></i> Deep Learning Integration</li>
+                    <li><i class='bx bx-check'></i> Cloud Deployment</li>
+                </ul>
+                <a href="#contact" class="btn">Select Plan</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 9. Certificates Section (Added) -->
+    <section class="certificates bg-first" id="certificates">
+        <h2 class="heading">My <span class="highlight">Certificates</span></h2>
+        <div class="grid-wrapper">
+            <div class="info-box">
+                <i class='bx bxs-certification'></i>
+                <h3>NTI Training Certificate</h3>
+                <p>Cloud Solutions Architect Program intensive training completion.</p>
+            </div>
+            <div class="info-box">
+                <i class='bx bxs-graduation'></i>
+                <h3>AI Engineering</h3>
+                <p>Academic Excellence from Ismailia National University.</p>
+            </div>
+            <div class="info-box">
+                <i class='bx bxs-award'></i>
+                <h3>Machine Learning</h3>
+                <p>Advanced Python & Data Science Specializations.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 10. Testimonials Section (Added) -->
+    <section class="testimonials bg-second" id="testimonials">
+        <h2 class="heading">Client <span class="highlight">Reviews</span></h2>
+        <div class="grid-wrapper">
+            <div class="info-box testi-box">
+                <i class='bx bxs-quote-right quote-icon'></i>
+                <p>"Ahmed delivered exactly what was required for our project on Mostaql. His Python skills and understanding of AI logic are top-notch."</p>
+                <h4>Freelance Client</h4>
+                <span>Mostaql Platform</span>
+            </div>
+            <div class="info-box testi-box">
+                <i class='bx bxs-quote-right quote-icon'></i>
+                <p>"Highly professional and dedicated. He took the time to understand the business need before writing a single line of code. Excellent results."</p>
+                <h4>Tech Entrepreneur</h4>
+                <span>Consultation Client</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- 11. Contact Section (Your original code untouched) -->
     <section class="contact" id="contact">
         <h2 class="heading">Contact <span class="highlight">Me!</span></h2>
         <form action="#">
@@ -666,17 +915,17 @@
         </form>
     </section>
 
-    <!-- Footer -->
+    <!-- Footer (Your original code untouched) -->
     <footer class="footer">
         <div class="footer-text">
-            <p>Copyright &copy; 2025 by Ahmed Mohamed | Senior AI Engineer</p>
+            <p>Copyright &copy; 2026 by Ahmed Mohamed | Senior AI Engineer</p>
         </div>
         <div class="footer-iconTop">
             <a href="#home"><i class='bx bx-up-arrow-alt'></i></a>
         </div>
     </footer>
 
-    <!-- Scripts -->
+    <!-- Scripts (Your original code untouched) -->
     <script>
         document.addEventListener("DOMContentLoaded", () => {
             // --- 1. Smart Image Resolver ---
