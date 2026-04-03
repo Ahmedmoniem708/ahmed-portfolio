@@ -626,7 +626,7 @@
         <div class="home-img">
             <div class="glowing-circle"></div>
             <div class="image-box">
-                <img src="profile.jpg" alt="Profile" class="smart-img" data-name="profile">
+                <img src="profile.jpg.jpg.jpeg" alt="Profile">
             </div>
         </div>
     </section>
@@ -636,7 +636,7 @@
         <div class="about-img">
             <div class="glowing-circle"></div>
             <div class="image-box">
-                <img src="profile.jpg" alt="About Me" class="smart-img" data-name="profile">
+                <img src="profile.jpg.jpg.jpeg" alt="About Me">
             </div>
         </div>
         <div class="about-content">
@@ -776,7 +776,7 @@
         <div class="projects-container">
             <!-- 1. Enterprise On-Prem AI Engine (Updated details) -->
             <div class="project-box">
-                <img src="C:\Users\Compumart\OneDrive\Pictures\WhatsApp Image 2026-04-03 at 8.14.13 PM.jpeg" alt="Enterprise AI Engine" style="width: 100%; height: 100%; object-fit: cover;">
+                <img src="WhatsApp Image 2026-04-03 at 8.14.13 PM.jpeg" alt="Enterprise AI Engine" style="width: 100%; height: 100%; object-fit: cover;" onerror="this.src='https://placehold.co/400x400/081b29/00abf0?text=Enterprise+AI'">
                 <div class="project-layer">
                     <h4>Enterprise On-Prem AI Engine</h4>
                     <p>Architected a local enterprise AI engine using vLLM (120+ tokens/s). Designed a custom Semantic Router orchestrating Hybrid Search (Qdrant) and PostgreSQL for 50M+ records with strict RBAC/JWT security.</p>
@@ -786,7 +786,7 @@
             
             <!-- 2. Tajweed Error Mapping (Updated details) -->
             <div class="project-box">
-                <img src="C:\Users\Compumart\OneDrive\Pictures\Camera Roll\WhatsApp Image 2026-04-03 at 8.16.34 PM.jpeg" alt="Tajweed Error Mapping" style="width: 100%; height: 100%; object-fit: cover;">
+                <img src="WhatsApp Image 2026-04-03 at 8.16.34 PM.jpeg" alt="Tajweed Error Mapping" style="width: 100%; height: 100%; object-fit: cover;" onerror="this.src='https://placehold.co/400x400/081b29/00abf0?text=Tajweed+AI'">
                 <div class="project-layer">
                     <h4>Tajweed Error Mapping</h4>
                     <p>Engineered an advanced audio analysis backend using PyTorch, Librosa, and FastAPI. Implemented Forced Alignment and ASR techniques for precise phoneme-level error detection in Quranic recitations.</p>
@@ -796,7 +796,7 @@
 
             <!-- 3. AI Spam Classifier -->
             <div class="project-box">
-                <img src="spam-detector.png" alt="AI Spam" class="smart-img" data-name="spam-detector">
+                <img src="spam-detector.png.png" alt="AI Spam">
                 <div class="project-layer">
                     <h4>AI Spam Classifier</h4>
                     <p>NLP model using Naive Bayes to architect secure communications.</p>
@@ -806,7 +806,7 @@
             
             <!-- 4. Predictive Pricing -->
             <div class="project-box">
-                <img src="house-price.png" alt="House Price" class="smart-img" data-name="house-price">
+                <img src="house-price.png.png" alt="House Price">
                 <div class="project-layer">
                     <h4>Predictive Pricing</h4>
                     <p>Advanced regression analytics for high-precision valuation forecasting.</p>
@@ -816,7 +816,7 @@
             
             <!-- 5. Neural Visual Analyzer -->
             <div class="project-box">
-                <img src="visual-analyzer.jpg" alt="Vision" class="smart-img" data-name="visual-analyzer">
+                <img src="visual-analyzer.jpg.jpg" alt="Vision">
                 <div class="project-layer">
                     <h4>Neural Visual Analyzer</h4>
                     <p>Edge Computer Vision system deployed using TensorFlow.js architecture.</p>
@@ -954,29 +954,6 @@
     <!-- Scripts -->
     <script>
         document.addEventListener("DOMContentLoaded", () => {
-            // --- 1. Smart Image Resolver ---
-            const smartImages = document.querySelectorAll('.smart-img');
-            smartImages.forEach(img => {
-                const baseName = img.getAttribute('data-name');
-                const variations = [
-                    `${baseName}.jpg.jpg.jpg`, `${baseName}.jpg.jpg.jpeg`,
-                    `${baseName}.png.png`, `${baseName}.png.jpg`,
-                    `${baseName}.jpg.jpg`, `${baseName}.jpg`, `${baseName}.png`, `${baseName}.jpeg`
-                ];
-                let attempt = 0;
-                function tryNext() {
-                    if (attempt < variations.length) {
-                        img.src = variations[attempt];
-                        attempt++;
-                    } else {
-                        img.src = 'https://placehold.co/400x400/081b29/00abf0?text=AI+Portfolio';
-                        img.onerror = null;
-                    }
-                }
-                img.onerror = tryNext;
-                tryNext();
-            });
-
             // --- 2. Navigation & Sticky ---
             const menuIcon = document.querySelector('#menu-icon');
             const navbar = document.querySelector('.navbar');
