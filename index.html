@@ -393,7 +393,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: linear-gradient(rgba(0,0,0,.2), var(--main-color));
+            background: linear-gradient(rgba(0,0,0,.3), var(--main-color));
             display: flex;
             justify-content: center;
             align-items: center;
@@ -409,14 +409,14 @@
         }
 
         .project-layer h4 {
-            font-size: 3rem; /* تكبير عنوان المشروع */
+            font-size: 2.8rem; /* تكبير عنوان المشروع */
             color: var(--bg-color);
             font-weight: 800;
             margin-bottom: 1rem;
         }
 
         .project-layer p {
-            font-size: 1.8rem; /* تكبير وصف المشروع */
+            font-size: 1.6rem; /* تكبير وصف المشروع */
             margin-bottom: 2rem;
             color: var(--bg-color);
             font-weight: 600;
@@ -498,9 +498,10 @@
         .timeline-content p { font-size: 1.6rem; color: #d1d1d1; }
 
         /* Packages Specific Styling */
-        .info-box .price { font-size: 4rem; color: var(--main-color); font-weight: 700; margin-bottom: 2rem; }
+        .info-box .price { font-size: 4rem; color: var(--main-color); font-weight: 800; margin-bottom: 2rem; }
+        .info-box .price span { font-size: 1.8rem; font-weight: 500; color: #d1d1d1; }
         .info-box ul { list-style: none; margin-bottom: 3rem; text-align: left; display: inline-block; }
-        .info-box ul li { font-size: 1.8rem; margin-bottom: 1.5rem; display: flex; align-items: center; }
+        .info-box ul li { font-size: 1.8rem; margin-bottom: 1.5rem; display: flex; align-items: flex-start; }
         .info-box ul li i { font-size: 2.4rem; margin-right: 1rem; margin-bottom: 0; color: var(--main-color); }
 
         /* Testimonials Specific Styling */
@@ -606,14 +607,13 @@
         </nav>
     </header>
 
-    <!-- 1. Home Section (Cover - Cleaned up to match: صوره و title و الاسم بس, keeping social links just in case) -->
+    <!-- 1. Home Section (Cover) -->
     <section class="home" id="home">
         <div class="home-content">
             <h3>Hello, It's Me</h3>
             <h1>Ahmed Mohamed Abdelmoniem</h1>
             <h3>And I'm a <span class="highlight" id="typed-text"></span></h3>
             
-            <!-- أزرار السوشيال ميديا لم أقم بإزالتها حفاظاً على الكود الأصلي -->
             <div class="social-media">
                 <a href="https://www.linkedin.com/in/ahmed-abdelmoniem-406619288" target="_blank"><i class='bx bxl-linkedin'></i></a>
                 <a href="https://github.com/Ahmedmoniem708" target="_blank"><i class='bx bxl-github'></i></a>
@@ -631,7 +631,7 @@
         </div>
     </section>
 
-    <!-- 2. About Section (Updated exact 8 lines) -->
+    <!-- 2. About Section (Updated with Numbers & ROI focus) -->
     <section class="about" id="about">
         <div class="about-img">
             <div class="glowing-circle"></div>
@@ -643,20 +643,22 @@
             <h2 class="heading">About <span class="highlight">Me</span></h2>
             <h3>Expert AI & ML Architect | Data Scientist</h3>
             <p>
-                <strong>I am Ahmed Mohamed,</strong> a Senior AI & Machine Learning Solutions Engineer and Data Scientist. 
-                I specialize in architecting end-to-end Deep Learning models and custom, high-performance intelligent systems. 
-                I empower tech-forward businesses and startups to automate operations and unlock data-driven optimization. 
-                My unique edge lies in bridging advanced AI theory with clean, production-ready software engineering. 
-                Backed by a proven track record on Mostaql and building tools like an AI audio corrector, I deliver measurable results. 
-                I am a dedicated problem-solver who views code as a strategic tool to engineer a smarter, autonomous future. 
-                Every architecture I build is meticulously tested, optimized, and built to scale effortlessly. 
-                <br><br><em>Let's collaborate to transform your raw data into your most powerful strategic asset.</em>
+                <strong>I am Ahmed Mohamed,</strong> a Senior AI & Machine Learning Solutions Engineer. 
+                I specialize in architecting enterprise-grade intelligent systems that drive measurable ROI. 
+                My track record includes engineering robust On-Premise LLM systems capable of processing <strong>120+ tokens/sec</strong> 
+                and building dynamic semantic routers seamlessly handling over <strong>50 Million records</strong>. 
+                By leveraging advanced frameworks like vLLM, PyTorch, and FastAPI, I help businesses reduce operational costs by up to <strong>40%</strong> 
+                and optimize GPU VRAM consumption significantly. 
+                Backed by a <strong>100% project completion and satisfaction rate</strong> on platforms like Mostaql, I deliver 
+                highly secure (RBAC/JWT), scalable architectures tailored for complex business needs—from 
+                phoneme-level audio processing to high-throughput data pipelines.
+                <br><br><em>Let's collaborate to transform your data into a strategic asset with tangible results.</em>
             </p>
             <a href="#contact" class="btn">Hire Me</a>
         </div>
     </section>
 
-    <!-- 3. USP Section (Added keeping your exact design logic) -->
+    <!-- 3. USP Section -->
     <section class="usp bg-first" id="usp">
         <h2 class="heading">Why <span class="highlight">Choose Me?</span></h2>
         <div class="grid-wrapper">
@@ -678,7 +680,7 @@
         </div>
     </section>
 
-    <!-- 4. Education Section (Added keeping your exact design logic) -->
+    <!-- 4. Education Section -->
     <section class="education bg-second" id="education">
         <h2 class="heading">My <span class="highlight">Education</span></h2>
         <div class="timeline">
@@ -699,7 +701,7 @@
         </div>
     </section>
 
-    <!-- 5. Skills Section (Your original code untouched) -->
+    <!-- 5. Skills Section -->
     <section class="skills bg-first" id="skills">
         <h2 class="heading">My <span class="highlight">Expertise</span></h2>
         <div class="skills-container">
@@ -747,7 +749,7 @@
         </div>
     </section>
 
-    <!-- 6. Work Experience Section (Added) -->
+    <!-- 6. Work Experience Section -->
     <section class="experience bg-second" id="experience">
         <h2 class="heading">Work <span class="highlight">Experience</span></h2>
         <div class="timeline">
@@ -768,11 +770,31 @@
         </div>
     </section>
 
-    <!-- 7. Projects Section (Your original code untouched) -->
+    <!-- 7. Projects Section (Updated with detailed descriptions) -->
     <section class="projects bg-first" id="projects">
         <h2 class="heading">Strategic <span class="highlight">Projects</span></h2>
         <div class="projects-container">
-            <!-- 1 -->
+            <!-- 1. Enterprise On-Prem AI Engine (Updated details) -->
+            <div class="project-box">
+                <img src="C:\Users\Compumart\OneDrive\Pictures\WhatsApp Image 2026-04-03 at 8.14.13 PM.jpeg" alt="Enterprise AI Engine" style="width: 100%; height: 100%; object-fit: cover;">
+                <div class="project-layer">
+                    <h4>Enterprise On-Prem AI Engine</h4>
+                    <p>Architected a local enterprise AI engine using vLLM (120+ tokens/s). Designed a custom Semantic Router orchestrating Hybrid Search (Qdrant) and PostgreSQL for 50M+ records with strict RBAC/JWT security.</p>
+                    <a href="javascript:void(0)"><i class='bx bxl-github'></i></a>
+                </div>
+            </div>
+            
+            <!-- 2. Tajweed Error Mapping (Updated details) -->
+            <div class="project-box">
+                <img src="C:\Users\Compumart\OneDrive\Pictures\Camera Roll\WhatsApp Image 2026-04-03 at 8.16.34 PM.jpeg" alt="Tajweed Error Mapping" style="width: 100%; height: 100%; object-fit: cover;">
+                <div class="project-layer">
+                    <h4>Tajweed Error Mapping</h4>
+                    <p>Engineered an advanced audio analysis backend using PyTorch, Librosa, and FastAPI. Implemented Forced Alignment and ASR techniques for precise phoneme-level error detection in Quranic recitations.</p>
+                    <a href="javascript:void(0)"><i class='bx bxl-github'></i></a>
+                </div>
+            </div>
+
+            <!-- 3. AI Spam Classifier -->
             <div class="project-box">
                 <img src="spam-detector.png" alt="AI Spam" class="smart-img" data-name="spam-detector">
                 <div class="project-layer">
@@ -781,7 +803,8 @@
                     <a href="https://github.com/Ahmedmoniem708/AI-Spam-Detector" target="_blank"><i class='bx bxl-github'></i></a>
                 </div>
             </div>
-            <!-- 2 -->
+            
+            <!-- 4. Predictive Pricing -->
             <div class="project-box">
                 <img src="house-price.png" alt="House Price" class="smart-img" data-name="house-price">
                 <div class="project-layer">
@@ -790,7 +813,8 @@
                     <a href="https://github.com/Ahmedmoniem708/House-Price-Regression-ML" target="_blank"><i class='bx bxl-github'></i></a>
                 </div>
             </div>
-            <!-- 3 -->
+            
+            <!-- 5. Neural Visual Analyzer -->
             <div class="project-box">
                 <img src="visual-analyzer.jpg" alt="Vision" class="smart-img" data-name="visual-analyzer">
                 <div class="project-layer">
@@ -799,7 +823,8 @@
                     <a href="https://github.com/Ahmedmoniem708/visual-analyzer" target="_blank"><i class='bx bxl-github'></i></a>
                 </div>
             </div>
-            <!-- 4 -->
+            
+            <!-- 6. Royal Bank Ecosystem -->
             <div class="project-box">
                 <div class="project-placeholder"><i class='bx bxs-bank'></i></div>
                 <div class="project-layer">
@@ -808,7 +833,8 @@
                     <a href="https://github.com/Ahmedmoniem708/Royal-Bank-System" target="_blank"><i class='bx bxl-github'></i></a>
                 </div>
             </div>
-            <!-- 5 -->
+            
+            <!-- 7. Olist E-Commerce Analytics -->
             <div class="project-box">
                 <div class="project-placeholder"><i class='bx bxs-shopping-bag'></i></div>
                 <div class="project-layer">
@@ -820,44 +846,44 @@
         </div>
     </section>
 
-    <!-- 8. Packages Section (Added) -->
+    <!-- 8. Packages Section (Updated with Prices) -->
     <section class="packages bg-second" id="packages">
         <h2 class="heading">Service <span class="highlight">Packages</span></h2>
         <div class="grid-wrapper">
             <div class="info-box">
-                <h3>Consultation & Planning</h3>
-                <div class="price">Contact</div>
+                <h3>MVP / Starter Plan</h3>
+                <div class="price">$350<span> / Project</span></div>
                 <ul>
                     <li><i class='bx bx-check'></i> AI Feasibility Study</li>
                     <li><i class='bx bx-check'></i> Data Assessment</li>
-                    <li><i class='bx bx-check'></i> Architecture Roadmap</li>
+                    <li><i class='bx bx-check'></i> Basic MVP Deployment</li>
                 </ul>
                 <a href="#contact" class="btn">Select Plan</a>
             </div>
             <div class="info-box">
-                <h3>Custom ML Model</h3>
-                <div class="price">Custom</div>
+                <h3>Custom ML Pipeline</h3>
+                <div class="price">$850<span> / Project</span></div>
                 <ul>
-                    <li><i class='bx bx-check'></i> Data Preprocessing</li>
+                    <li><i class='bx bx-check'></i> Advanced Data Preprocessing</li>
                     <li><i class='bx bx-check'></i> Model Training & Tuning</li>
-                    <li><i class='bx bx-check'></i> Python Script Delivery</li>
+                    <li><i class='bx bx-check'></i> RESTful API Integration</li>
                 </ul>
                 <a href="#contact" class="btn">Select Plan</a>
             </div>
             <div class="info-box">
-                <h3>End-to-End AI System</h3>
-                <div class="price">Premium</div>
+                <h3>Enterprise AI System</h3>
+                <div class="price">$2000<span>+ / System</span></div>
                 <ul>
                     <li><i class='bx bx-check'></i> Full System Architecture</li>
-                    <li><i class='bx bx-check'></i> Deep Learning Integration</li>
-                    <li><i class='bx bx-check'></i> Cloud Deployment</li>
+                    <li><i class='bx bx-check'></i> Local LLM / RAG Setup</li>
+                    <li><i class='bx bx-check'></i> High-Security Deployment</li>
                 </ul>
                 <a href="#contact" class="btn">Select Plan</a>
             </div>
         </div>
     </section>
 
-    <!-- 9. Certificates Section (Added) -->
+    <!-- 9. Certificates Section -->
     <section class="certificates bg-first" id="certificates">
         <h2 class="heading">My <span class="highlight">Certificates</span></h2>
         <div class="grid-wrapper">
@@ -879,7 +905,7 @@
         </div>
     </section>
 
-    <!-- 10. Testimonials Section (Added) -->
+    <!-- 10. Testimonials Section -->
     <section class="testimonials bg-second" id="testimonials">
         <h2 class="heading">Client <span class="highlight">Reviews</span></h2>
         <div class="grid-wrapper">
@@ -898,7 +924,7 @@
         </div>
     </section>
 
-    <!-- 11. Contact Section (Your original code untouched) -->
+    <!-- 11. Contact Section -->
     <section class="contact" id="contact">
         <h2 class="heading">Contact <span class="highlight">Me!</span></h2>
         <form action="#">
@@ -915,7 +941,7 @@
         </form>
     </section>
 
-    <!-- Footer (Your original code untouched) -->
+    <!-- Footer -->
     <footer class="footer">
         <div class="footer-text">
             <p>Copyright &copy; 2026 by Ahmed Mohamed | Senior AI Engineer</p>
@@ -925,7 +951,7 @@
         </div>
     </footer>
 
-    <!-- Scripts (Your original code untouched) -->
+    <!-- Scripts -->
     <script>
         document.addEventListener("DOMContentLoaded", () => {
             // --- 1. Smart Image Resolver ---
